@@ -1,7 +1,10 @@
 // query selector variables go here 👇
+var posterImage = document.querySelector(".poster-img");
+var posterTitle = document.querySelector(".poster-title");
+var posterQuote = document.querySelector(".poster-quote");
 
 // we've provided you with some data to work with 👇
-// tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared 
+// tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
 var images = [
   "./assets/bees.jpg",
   "./assets/bridge.jpg",
@@ -20,7 +23,7 @@ var images = [
   "./assets/runner.jpg",
   "./assets/squirrel.jpg",
   "./assets/tiger.jpg",
-  "./assets/turtle.jpg"
+  "./assets/turtle.jpg",
 ];
 var titles = [
   "determination",
@@ -57,7 +60,7 @@ var titles = [
   "smile",
   "trust",
   "understanding",
-  "wisdom"
+  "wisdom",
 ];
 var quotes = [
   "Don’t downgrade your dream just to fit your reality, upgrade your conviction to match your destiny.",
@@ -97,12 +100,14 @@ var quotes = [
   "If you have good thoughts they will shine out of your face like sunbeams and you will always look lovely.",
   "No matter what people tell you, words and ideas can change the world.",
   "Each person must live their life as a model for others.",
-  "A champion is defined not by their wins but by how they can recover when they fall."
+  "A champion is defined not by their wins but by how they can recover when they fall.",
 ];
 var savedPosters = [];
 var currentPoster;
 
 // event listeners go here 👇
+
+window.addEventListener("load", displayRandomPoster);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -112,8 +117,26 @@ function getRandomIndex(array) {
 
 function createPoster(imageURL, title, quote) {
   return {
-    id: Date.now(), 
-    imageURL: imageURL, 
-    title: title, 
-    quote: quote}
+    id: Date.now(),
+    imageURL: imageURL,
+    title: title,
+    quote: quote,
+  };
+}
+
+function createRandomPoster() {
+  image = images[getRandomIndex(images)];
+  title = titles[getRandomIndex(titles)];
+  quote = quotes[getRandomIndex(quotes)];
+  return createPoster(image, title, quote);
+}
+
+function displayRandomPoster() {
+  poster = createRandomPoster();
+  fileNameWithExt = poster.imageURL.split("/").pop();
+  fileNameWithoutExt = fileNameWithExt.split(".")[0];
+  posterImage.src = poster.imageURL + "Broken";
+  posterImage.alt = fileNameWithoutExt;
+  posterTitle.innerText = poster.title;
+  posterQuote.innerText = poster.quote;
 }
