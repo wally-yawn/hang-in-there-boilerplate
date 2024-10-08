@@ -2,6 +2,7 @@
 var posterImage = document.querySelector(".poster-img");
 var posterTitle = document.querySelector(".poster-title");
 var posterQuote = document.querySelector(".poster-quote");
+var showRandomButton = document.querySelector(".show-random");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -135,7 +136,7 @@ function displayRandomPoster() {
   poster = createRandomPoster();
   fileNameWithExt = poster.imageURL.split("/").pop();
   fileNameWithoutExt = fileNameWithExt.split(".")[0];
-  posterImage.src = poster.imageURL + "Broken";
+  posterImage.src = poster.imageURL;
   posterImage.alt = fileNameWithoutExt;
   posterTitle.innerText = poster.title;
   posterQuote.innerText = poster.quote;
