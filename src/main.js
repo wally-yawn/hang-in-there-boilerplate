@@ -125,7 +125,7 @@ makeYourOwnPosterButton.addEventListener("click", switchViewToForm);
 showSavedPostersButton.addEventListener("click", switchViewToSavedPosters);
 showMainButton.addEventListener("click", backToMainFromForm);
 backToMainButton.addEventListener("click", backToMainFromSaved);
-makePosterButton.addEventListener("click", savePoster);
+makePosterButton.addEventListener("click", showMyPoster);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -182,15 +182,14 @@ function switchView(oldView, newView) {
   newView.classList.remove("hidden");
 }
 
-function savePoster() {
+function showMyPoster() {
   event.preventDefault();
   console.log("You hit savePoster!");
-  myNewPoster = createPoster(
+  currentPoster = createPoster(
     formPosterImageUrl.ariaValueMax,
     formPosterTitle.ariaValueMax,
     formPosterQuote.value
   );
-  console.log("myNewPoster: ", myNewPoster);
-  savedPosters.push(myNewPoster);
+  console.log("myNewPoster: ", currentPoster);
 }
 // TODO - Refactor displayRandomPoster to call a helper method displayPoster that can be reused for saved posters
