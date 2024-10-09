@@ -3,6 +3,9 @@ var posterImage = document.querySelector(".poster-img");
 var posterTitle = document.querySelector(".poster-title");
 var posterQuote = document.querySelector(".poster-quote");
 var showRandomButton = document.querySelector(".show-random");
+var makeYourOwnPosterButton = document.querySelector(".show-form");
+var posterForm = document.querySelector(".poster-form");
+var mainPoster = document.querySelector(".main-poster");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -110,6 +113,7 @@ var currentPoster;
 
 window.addEventListener("load", displayRandomPoster);
 showRandomButton.addEventListener("click", displayRandomPoster);
+makeYourOwnPosterButton.addEventListener("click", switchViewToForm);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -141,4 +145,13 @@ function displayRandomPoster() {
   posterImage.alt = fileNameWithoutExt;
   posterTitle.innerText = poster.title;
   posterQuote.innerText = poster.quote;
+}
+
+function switchViewToForm() {
+  switchView(posterForm);
+}
+
+function switchView(newView) {
+  mainPoster.classList.add("hidden");
+  newView.classList.remove("hidden");
 }
