@@ -182,4 +182,14 @@ function switchView(oldView, newView) {
   newView.classList.remove("hidden");
 }
 
-function savePoster() {}
+function savePoster() {
+  event.preventDefault();
+  console.log("You hit savePoster!");
+  myNewPoster = createPoster(
+    formPosterImageUrl.ariaValueMax,
+    formPosterTitle.ariaValueMax,
+    formPosterQuote.value
+  );
+  console.log("myNewPoster: ", myNewPoster);
+  savedPosters.push(myNewPoster);
+}
