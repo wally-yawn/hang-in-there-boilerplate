@@ -192,5 +192,12 @@ function showMyPoster() {
     formPosterTitle.value,
     formPosterQuote.value
   );
+  images.push(formPosterImageUrl.value);
+  titles.push(formPosterTitle.value);
+  quotes.push(formPosterQuote.value);
+  console.log("Images:", images);
+  console.log("Titles:", titles);
+  console.log("Quotes:", quotes);
+  displayPoster(currentPoster);
+  backToMainFromForm();
 }
-// TODO - Refactor displayRandomPoster to call a helper method displayPoster that can be reused for saved posters
