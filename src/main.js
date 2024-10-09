@@ -193,3 +193,4 @@ function savePoster() {
   console.log("myNewPoster: ", myNewPoster);
   savedPosters.push(myNewPoster);
 }
+// TODO - Refactor displayRandomPoster to call a helper method displayPoster that can be reused for saved posters
