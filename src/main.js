@@ -8,6 +8,8 @@ var makeYourOwnPosterButton = document.querySelector(".show-form");
 var posterForm = document.querySelector(".poster-form");
 var mainPoster = document.querySelector(".main-poster");
 var savedPostersSection = document.querySelector(".saved-posters");
+var showMainButton = document.querySelector(".show-main");
+var backToMainButton = document.querySelector(".back-to-main");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -117,6 +119,7 @@ window.addEventListener("load", displayRandomPoster);
 showRandomButton.addEventListener("click", displayRandomPoster);
 makeYourOwnPosterButton.addEventListener("click", switchViewToForm);
 showSavedPostersButton.addEventListener("click", switchViewToSavedPosters);
+showMainButton.addEventListener("click", backToMainFromForm);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -151,16 +154,17 @@ function displayRandomPoster() {
 }
 
 function switchViewToForm() {
-  console.log("I'm switching to Form");
-  switchView(posterForm);
+  switchView(mainPoster, posterForm);
 }
 
 function switchViewToSavedPosters() {
-  console.log("I'm switching to savedPosters");
-  switchView(savedPostersSection);
+  switchView(mainPoster, savedPostersSection);
+}
+function backToMainFromForm() {
+  switchView(posterForm, mainPoster);
 }
 
-function switchView(newView) {
-  mainPoster.classList.add("hidden");
+function switchView(oldView, newView) {
+  oldView.classList.add("hidden");
   newView.classList.remove("hidden");
 }
