@@ -3,9 +3,11 @@ var posterImage = document.querySelector(".poster-img");
 var posterTitle = document.querySelector(".poster-title");
 var posterQuote = document.querySelector(".poster-quote");
 var showRandomButton = document.querySelector(".show-random");
+var showSavedPostersButton = document.querySelector(".show-saved");
 var makeYourOwnPosterButton = document.querySelector(".show-form");
 var posterForm = document.querySelector(".poster-form");
 var mainPoster = document.querySelector(".main-poster");
+var savedPostersSection = document.querySelector(".saved-posters");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -114,6 +116,7 @@ var currentPoster;
 window.addEventListener("load", displayRandomPoster);
 showRandomButton.addEventListener("click", displayRandomPoster);
 makeYourOwnPosterButton.addEventListener("click", switchViewToForm);
+showSavedPostersButton.addEventListener("click", switchViewToSavedPosters);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -148,7 +151,13 @@ function displayRandomPoster() {
 }
 
 function switchViewToForm() {
+  console.log("I'm switching to Form");
   switchView(posterForm);
+}
+
+function switchViewToSavedPosters() {
+  console.log("I'm switching to savedPosters");
+  switchView(savedPostersSection);
 }
 
 function switchView(newView) {
