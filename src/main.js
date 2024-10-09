@@ -150,13 +150,17 @@ function createRandomPoster() {
 }
 
 function displayRandomPoster() {
-  poster = createRandomPoster();
-  fileNameWithExt = poster.imageURL.split("/").pop();
+  currentPoster = createRandomPoster();
+  displayPoster(currentPoster);
+}
+
+function displayPoster(currentPoster) {
+  fileNameWithExt = currentPoster.imageURL.split("/").pop();
   fileNameWithoutExt = fileNameWithExt.split(".")[0];
-  posterImage.src = poster.imageURL;
+  posterImage.src = currentPoster.imageURL;
   posterImage.alt = fileNameWithoutExt;
-  posterTitle.innerText = poster.title;
-  posterQuote.innerText = poster.quote;
+  posterTitle.innerText = currentPoster.title;
+  posterQuote.innerText = currentPoster.quote;
 }
 
 function switchViewToForm() {
@@ -172,9 +176,7 @@ function backToMainFromForm() {
 }
 
 function backToMainFromSaved() {
-  console.log("I'm trying to switch back from main");
   switchView(savedPostersSection, mainPoster);
-  console.log("I should be switched back");
 }
 
 function switchView(oldView, newView) {
@@ -186,10 +188,9 @@ function showMyPoster() {
   event.preventDefault();
   console.log("You hit savePoster!");
   currentPoster = createPoster(
-    formPosterImageUrl.ariaValueMax,
-    formPosterTitle.ariaValueMax,
+    formPosterImageUrl.value,
+    formPosterTitle.value,
     formPosterQuote.value
   );
-  console.log("myNewPoster: ", currentPoster);
 }
 // TODO - Refactor displayRandomPoster to call a helper method displayPoster that can be reused for saved posters
