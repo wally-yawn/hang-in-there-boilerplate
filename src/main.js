@@ -14,6 +14,7 @@ var makePosterButton = document.querySelector(".make-poster");
 var formPosterImageUrl = document.querySelector("#poster-image-url");
 var formPosterTitle = document.querySelector("#poster-title");
 var formPosterQuote = document.querySelector("#poster-quote");
+var saveThisPosterButton = document.querySelector("#save-poster");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -126,6 +127,7 @@ showSavedPostersButton.addEventListener("click", switchViewToSavedPosters);
 showMainButton.addEventListener("click", backToMainFromForm);
 backToMainButton.addEventListener("click", backToMainFromSaved);
 makePosterButton.addEventListener("click", showMyPoster);
+saveThisPosterButton.addEventListener("click", saveThisPoster);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -201,3 +203,6 @@ function showMyPoster() {
   displayPoster(currentPoster);
   backToMainFromForm();
 }
+
+//save to the poster array
+//validate
