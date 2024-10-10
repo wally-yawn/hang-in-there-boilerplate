@@ -204,5 +204,13 @@ function showMyPoster() {
   backToMainFromForm();
 }
 
+function saveThisPoster() {
+  //if poster exists save it
+  checkIfPosterExist(currentPoster);
+}
+
+function checkIfPosterExist(poster) {
+  //check if poster exists
+}
 //save to the poster array
 //validate
