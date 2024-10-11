@@ -20,6 +20,7 @@ var formPosterTitle = document.querySelector("#poster-title");
 var formPosterQuote = document.querySelector("#poster-quote");
 var saveThisPosterButton = document.querySelector(".save-poster");
 var savedPostersGrid = document.querySelector(".saved-posters-grid");
+var unmotivationalPosters = document.querySelector(".unmotivational-posters");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -133,6 +134,7 @@ showMainButton.addEventListener("click", backToMainFromForm);
 backToMainButton.addEventListener("click", backToMainFromSaved);
 makePosterButton.addEventListener("click", showMyPoster);
 saveThisPosterButton.addEventListener("click", saveThisPoster);
+showUnmotivationalButton.addEventListener("click", switchViewToUnmotivational);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -186,6 +188,10 @@ function backToMainFromForm() {
 function backToMainFromSaved() {
   switchView(savedPostersSection, mainPoster);
   savedPostersGrid.innerHTML = ``;
+}
+
+function switchViewToUnmotivational() {
+  switchView(mainPoster, unmotivationalPosters);
 }
 
 function switchView(oldView, newView) {
