@@ -14,7 +14,7 @@ var makePosterButton = document.querySelector(".make-poster");
 var formPosterImageUrl = document.querySelector("#poster-image-url");
 var formPosterTitle = document.querySelector("#poster-title");
 var formPosterQuote = document.querySelector("#poster-quote");
-var saveThisPosterButton = document.querySelector("#save-poster");
+var saveThisPosterButton = document.querySelector(".save-poster");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -205,8 +205,9 @@ function showMyPoster() {
 }
 
 function saveThisPoster() {
-  //if poster exists save it
-  checkIfPosterExist(currentPoster);
+  //if poster exists do not save it
+  // checkIfPosterExist(currentPoster);
+  savedPosters.push(currentPoster);
 }
 
 function checkIfPosterExist(poster) {
