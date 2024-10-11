@@ -9,8 +9,12 @@ var posterForm = document.querySelector(".poster-form");
 var mainPoster = document.querySelector(".main-poster");
 var savedPostersSection = document.querySelector(".saved-posters");
 var showMainButton = document.querySelector(".show-main");
-var backToMainButton = document.querySelector(".back-to-main");
+var backToMainButton = document.querySelector("#back-to-main-from-saved");
 var makePosterButton = document.querySelector(".make-poster");
+var backToMainFromUnmotivationalButton = document.querySelector(
+  "#back-to-main-from-unmotivational"
+);
+var showUnmotivationalButton = document.querySelector(".show-unmotivational");
 var formPosterImageUrl = document.querySelector("#poster-image-url");
 var formPosterTitle = document.querySelector("#poster-title");
 var formPosterQuote = document.querySelector("#poster-quote");
