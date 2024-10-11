@@ -135,6 +135,10 @@ backToMainButton.addEventListener("click", backToMainFromSaved);
 makePosterButton.addEventListener("click", showMyPoster);
 saveThisPosterButton.addEventListener("click", saveThisPoster);
 showUnmotivationalButton.addEventListener("click", switchViewToUnmotivational);
+backToMainFromUnmotivationalButton.addEventListener(
+  "click",
+  switchViewtoMainFromUnmotivational
+);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -192,6 +196,10 @@ function backToMainFromSaved() {
 
 function switchViewToUnmotivational() {
   switchView(mainPoster, unmotivationalPosters);
+}
+
+function switchViewtoMainFromUnmotivational() {
+  switchView(unmotivationalPosters, mainPoster);
 }
 
 function switchView(oldView, newView) {
