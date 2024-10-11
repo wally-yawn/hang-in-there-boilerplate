@@ -15,6 +15,7 @@ var formPosterImageUrl = document.querySelector("#poster-image-url");
 var formPosterTitle = document.querySelector("#poster-title");
 var formPosterQuote = document.querySelector("#poster-quote");
 var saveThisPosterButton = document.querySelector(".save-poster");
+var savedPostersGrid = document.querySelector(".saved-posters-grid");
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -171,6 +172,7 @@ function switchViewToForm() {
 
 function switchViewToSavedPosters() {
   switchView(mainPoster, savedPostersSection);
+  displaySavedPosters();
 }
 
 function backToMainFromForm() {
@@ -179,6 +181,7 @@ function backToMainFromForm() {
 
 function backToMainFromSaved() {
   switchView(savedPostersSection, mainPoster);
+  savedPostersGrid.innerHTML = ``;
 }
 
 function switchView(oldView, newView) {
@@ -212,4 +215,14 @@ function saveThisPoster() {
 
 function checkIfPosterExist(poster) {
   return savedPosters.find((element) => element === currentPoster);
+}
+
+function displaySavedPosters() {
+  savedPosters.forEach((poster) => {
+    savedPostersGrid.innerHTML += `<article class="mini-poster">
+        <img class="poster-img" src="${poster.imageURL}" alt="${poster.alt}" />
+        <h1 class="poster-title">${poster.title}</h1>
+        <h3 class="poster-quote">${poster.quote}</h3>
+      </article>`;
+  });
 }
