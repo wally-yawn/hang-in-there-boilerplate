@@ -205,13 +205,11 @@ function showMyPoster() {
 }
 
 function saveThisPoster() {
-  //if poster exists do not save it
-  // checkIfPosterExist(currentPoster);
-  savedPosters.push(currentPoster);
+  if (checkIfPosterExist(currentPoster) === undefined) {
+    savedPosters.push(currentPoster);
+  }
 }
 
 function checkIfPosterExist(poster) {
-  //check if poster exists
+  return savedPosters.find((element) => element === currentPoster);
 }
-//save to the poster array
-//validate
