@@ -20,7 +20,12 @@ var formPosterTitle = document.querySelector("#poster-title");
 var formPosterQuote = document.querySelector("#poster-quote");
 var saveThisPosterButton = document.querySelector(".save-poster");
 var savedPostersGrid = document.querySelector(".saved-posters-grid");
-var unmotivationalPostersPage = document.querySelector(".unmotivational-posters");
+var unmotivationalPostersPage = document.querySelector(
+  ".unmotivational-posters"
+);
+var unmotivationalPostersgrid = document.querySelector(
+  "#unmotivational-posters-grid"
+);
 
 // we've provided you with some data to work with 👇
 // tip: you can tuck this data out of view with the dropdown found near the line number where the variable is declared
@@ -266,9 +271,9 @@ backToMainFromUnmotivationalButton.addEventListener(
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
-function loadPage(){
-  displayRandomPoster()
-  cleanData()
+function loadPage() {
+  displayRandomPoster();
+  cleanData();
 }
 
 function getRandomIndex(array) {
@@ -325,6 +330,7 @@ function backToMainFromSaved() {
 
 function switchViewToUnmotivational() {
   switchView(mainPoster, unmotivationalPostersPage);
+  displayUnmotivationalPosters();
 }
 
 function switchViewtoMainFromUnmotivational() {
@@ -372,15 +378,22 @@ function displaySavedPosters() {
 
 function cleanData() {
   unmotivationalPosters.forEach((unmotivational) => {
-    unmotivationalPoster = createPoster(unmotivational.img_url,unmotivational.name,unmotivational.description)
-    cleanUnmotivationalPosters.push(unmotivationalPoster)
-  })
-console.log(cleanUnmotivationalPosters)
-  //it should then be added onto the function for loading the page initially
+    unmotivationalPoster = createPoster(
+      unmotivational.img_url,
+      unmotivational.name,
+      unmotivational.description
+    );
+    cleanUnmotivationalPosters.push(unmotivationalPoster);
+  });
 }
 
-// Create a cleanData() function to go through each piece of this data and make it match the format we’ve been using for our poster data.
-// Hint - use the existing createPoster() function to help you accomplish this.
-// Hint - you can reach for a for loop or an iterator method here - several options will work - it’s your choice!
-// When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed immediately. Use the cleaned data for this.
-// Note: Don’t worry about the layout or styling of your unmotivational posters quite yet. You’ll tackle that in iteration 6 after you’ve finished the functionality.
+function displayUnmotivationalPosters() {
+  console.log("You hit display unmotivationalposters");
+  cleanUnmotivationalPosters.forEach((poster) => {
+    unmotivationalPostersgrid.innerHTML += `<article class="mini-poster">
+    <img class="poster-img" src="${poster.imageURL}" alt="${poster.alt}" />
+    <h2 class="poster-title">${poster.title}</h1>
+    <h4 class="poster-quote">${poster.quote}</h3>
+  </article>`;
+  });
+}
