@@ -30,7 +30,7 @@ button:hover {
 }
 
 .hidden {
-  display: none!important;
+  display: none !important;
 }
 
 /* ~~~~~ MAIN POSTER SECTION ~~~~~ */
@@ -125,7 +125,7 @@ button:hover {
 }
 
 .mini-poster img {
-  height:200px;
+  height: 200px;
   width: 300px;
 }
 
@@ -144,3 +144,6 @@ button:hover {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+
+/* Using CSS flexbox (not grid), control the layout of the unmotivational posters to match the comp provided here. Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!
+Using CSS, make the style and size of the unmotivational posters match the comp provided here. You’ll notice they should look slightly different than the saved posters. */

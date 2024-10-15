@@ -409,11 +409,4 @@ function deleteUnmotivational() {
   }
 }
 
-//-need to delete the poster from the array
-//-need to delete the innerhtml from the section
-//-need to redisplay the unmotivational posters
-
-// The poster should be removed from your cleaned unmotivational posters data set and should no longer be displayed on the DOM.
-// If the user navigates away from the Unmotivational Posters view after deleting some posters, those posters should still be gone when they navigate back to that view.
-
 //TODO: get alt for unmotivational poster
