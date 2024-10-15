@@ -406,8 +406,15 @@ function deleteUnmotivational() {
     cleanUnmotivationalPosters.splice(posterIndex, 1);
     unmotivationalPostersgrid.innerHTML = "";
     displayUnmotivationalPosters();
+  } else if (event.target.classList.contains("mini-poster")) {
+    var unmotivationalTitle = event.target.id;
+    posterIndex = cleanUnmotivationalPosters.findIndex(
+      (poster) => poster.title === unmotivationalTitle
+    );
+    cleanUnmotivationalPosters.splice(posterIndex, 1);
+    unmotivationalPostersgrid.innerHTML = "";
+    displayUnmotivationalPosters();
   }
 }
 
 //TODO: get alt for unmotivational poster and user created
-//TODO: make sure delete unmotivational handles background

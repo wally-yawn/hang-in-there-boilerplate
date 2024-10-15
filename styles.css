@@ -123,6 +123,7 @@ button:hover {
   padding: 25px;
   width: 425px;
   margin: 8px;
+  border-radius: 3%;
 }
 
 .mini-poster img {
@@ -153,7 +154,6 @@ button:hover {
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: space-evenly;
-  border-radius: 3%;
 }
 
 #unmotivational-posters-grid {
@@ -168,11 +168,3 @@ button:hover {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* 
-#back-to-main-from-unmotivational{
-  margin-top: 10px;
-  margin-bottom: 10px;
-} */
-/* Using CSS, make the style and size of the unmotivational posters match the comp provided here. 
-2. Padding on grid
-*/
