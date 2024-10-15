@@ -248,7 +248,6 @@ let unmotivationalPosters = [
     img_url: "./assets/doubt.jpg",
   },
 ];
-
 let cleanUnmotivationalPosters = [];
 var savedPosters = [];
 var currentPoster;
@@ -389,9 +388,8 @@ function cleanData() {
 }
 
 function displayUnmotivationalPosters() {
-  console.log("You hit display unmotivationalposters");
   cleanUnmotivationalPosters.forEach((poster) => {
-    unmotivationalPostersgrid.innerHTML += `<article class="mini-poster">
+    unmotivationalPostersgrid.innerHTML += `<article class="mini-poster" id=${poster.title}>
     <img class="poster-img" src="${poster.imageURL}" alt="${poster.alt}" />
     <h2 class="poster-title">${poster.title}</h1>
     <h4 class="poster-quote">${poster.quote}</h3>
@@ -400,15 +398,22 @@ function displayUnmotivationalPosters() {
 }
 
 function deleteUnmotivational() {
-  console.log("You hit deleteUnmotivational");
+  if (event.target.parentElement.classList.contains("mini-poster")) {
+    var unmotivationalTitle = event.target.parentElement.id;
+    posterIndex = cleanUnmotivationalPosters.findIndex(
+      (poster) => poster.title === unmotivationalTitle
+    );
+    cleanUnmotivationalPosters.splice(posterIndex, 1);
+    unmotivationalPostersgrid.innerHTML = "";
+    displayUnmotivationalPosters();
+  }
 }
 
-//delete unmotivational
-// From the unmotivational posters view, if a user double clicks a poster, it will be deleted
-//-need to add an event listener to the grid, then figure out which poster it was
 //-need to delete the poster from the array
 //-need to delete the innerhtml from the section
 //-need to redisplay the unmotivational posters
-// Users should be able to double click anywhere on the poster to delete it - on the image, text or background.
+
 // The poster should be removed from your cleaned unmotivational posters data set and should no longer be displayed on the DOM.
 // If the user navigates away from the Unmotivational Posters view after deleting some posters, those posters should still be gone when they navigate back to that view.
+
+//TODO: get alt for unmotivational poster
