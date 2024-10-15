@@ -409,4 +409,4 @@ function deleteUnmotivational() {
   }
 }
 
-//TODO: get alt for unmotivational poster
+//TODO: get alt for unmotivational poster and user created
