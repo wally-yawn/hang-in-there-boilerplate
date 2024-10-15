@@ -117,7 +117,7 @@ button:hover {
 }
 
 .mini-poster {
-  background: gray;
+  background: black;
   color: white;
   height: 340px;
   padding: 25px;
@@ -167,4 +167,8 @@ button:hover {
 #back-to-main-from-unmotivational {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.unmotivational {
+  background-color: gray;
 }

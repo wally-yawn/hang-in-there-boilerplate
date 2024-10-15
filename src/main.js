@@ -335,6 +335,7 @@ function switchViewToUnmotivational() {
 
 function switchViewtoMainFromUnmotivational() {
   switchView(unmotivationalPostersPage, mainPoster);
+  unmotivationalPostersgrid.innerHTML = "";
 }
 
 function switchView(oldView, newView) {
@@ -389,8 +390,10 @@ function cleanData() {
 
 function displayUnmotivationalPosters() {
   cleanUnmotivationalPosters.forEach((poster) => {
-    unmotivationalPostersgrid.innerHTML += `<article class="mini-poster" id=${poster.title}>
-    <img class="poster-img" src="${poster.imageURL}" alt="${poster.alt}" />
+    fileNameWithExt = poster.imageURL.split("/").pop();
+    fileNameWithoutExt = fileNameWithExt.split(".")[0];
+    unmotivationalPostersgrid.innerHTML += `<article class="mini-poster unmotivational" id=${poster.title}>
+    <img class="poster-img" src="${poster.imageURL}" alt="${fileNameWithoutExt}" />
     <h2 class="poster-title">${poster.title}</h1>
     <h4 class="poster-quote">${poster.quote}</h3>
   </article>`;
@@ -417,4 +420,4 @@ function deleteUnmotivational() {
   }
 }
 
-//TODO: get alt for unmotivational poster and user created
+//TODO: clear form on create your own
