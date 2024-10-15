@@ -268,6 +268,7 @@ backToMainFromUnmotivationalButton.addEventListener(
   "click",
   switchViewtoMainFromUnmotivational
 );
+unmotivationalPostersgrid.addEventListener("dblclick", deleteUnmotivational);
 
 // functions and event handlers go here 👇
 // (we've provided two to get you started)!
@@ -397,3 +398,17 @@ function displayUnmotivationalPosters() {
   </article>`;
   });
 }
+
+function deleteUnmotivational() {
+  console.log("You hit deleteUnmotivational");
+}
+
+//delete unmotivational
+// From the unmotivational posters view, if a user double clicks a poster, it will be deleted
+//-need to add an event listener to the grid, then figure out which poster it was
+//-need to delete the poster from the array
+//-need to delete the innerhtml from the section
+//-need to redisplay the unmotivational posters
+// Users should be able to double click anywhere on the poster to delete it - on the image, text or background.
+// The poster should be removed from your cleaned unmotivational posters data set and should no longer be displayed on the DOM.
+// If the user navigates away from the Unmotivational Posters view after deleting some posters, those posters should still be gone when they navigate back to that view.
