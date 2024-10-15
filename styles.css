@@ -117,11 +117,12 @@ button:hover {
 }
 
 .mini-poster {
-  background: black;
+  background: gray;
   color: white;
   height: 340px;
   padding: 25px;
   width: 425px;
+  margin: 8px;
 }
 
 .mini-poster img {
@@ -143,6 +144,7 @@ button:hover {
   letter-spacing: 5px;
   margin-bottom: 10px;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
 .unmotivational-posters {
@@ -151,6 +153,7 @@ button:hover {
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: space-evenly;
+  border-radius: 3%;
 }
 
 #unmotivational-posters-grid {
@@ -160,5 +163,16 @@ button:hover {
   align-items: center;
 }
 
-/* Using CSS flexbox (not grid), control the layout of the unmotivational posters to match the comp provided here. Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!
-Using CSS, make the style and size of the unmotivational posters match the comp provided here. You’ll notice they should look slightly different than the saved posters. */
+#unmotivational-posters-header,
+#back-to-main-from-unmotivational {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* 
+#back-to-main-from-unmotivational{
+  margin-top: 10px;
+  margin-bottom: 10px;
+} */
+/* Using CSS, make the style and size of the unmotivational posters match the comp provided here. 
+2. Padding on grid
+*/

@@ -410,3 +410,4 @@ function deleteUnmotivational() {
 }
 
 //TODO: get alt for unmotivational poster and user created
+//TODO: make sure delete unmotivational handles background
