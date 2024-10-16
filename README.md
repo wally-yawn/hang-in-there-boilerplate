@@ -1,30 +1,3 @@
-# Hang In There
-
-A boilerplate repo.
-
-## Set Up
-
-1. Fork this repository
-2. Clone down your new, forked repo
-3. `cd` into the repository
-4. Open it in your text editor
-5. Add the instructors as collaborators on the repository
-
-Project spec & rubric can be found [here](https://curriculum.turing.edu/module2/projects/hang-in-there/index)
-
-To view your project:
-
-1. In your terminal, navigate to your project repo
-2. Run the command `open index.html`
-
----
-
-# README Template
-
-Before turning this project in, erase this line and everything above it and fill in the info below.
-
----
-
 # Hang in There
 
 ### Abstract:
@@ -49,14 +22,21 @@ Clone down the repository and open index.html in a web browser.
 
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 
+This project was done as the first individual project in the second Mod of Turing. This took about a week to complete.
+
 ### Contributors:
 
 [//]: <> (Who worked on this application? Link to your GitHub. Consider also providing LinkedIn link)
 
+Wally Wallace was the sole contributor.
+https://www.linkedin.com/in/wally--wallace/
+
 ### Learning Goals:
 
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
+The learning goals of this project was to become more familiar with front end development, specifically HTML, Javascript, and CSS.
 
 ### Wins + Challenges:
 
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+Some of the big wins for the project were in overcoming the challenges that styling with CSS presented for me. The item that presented the biggest issue was in using flexbox to create the layout of the unmotivational posters grid, and in understanding how multiple CSS rules applied to them would be prioritized when assigned to items. I was able to use my cohort to understand flexbox better and eventually the CSS rules clicked in a way that I was able to match the styling of the comps.
