@@ -43,7 +43,7 @@ Clone down the repository and open index.html in a web browser.
 
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off. gifs preferred!)
 
-<div style="position: relative; padding-bottom: 54.895833333333336%; height: 0;"><iframe src="https://www.loom.com/embed/575ab9f2cee94ae69b148359f7ae239e?sid=151ce930-48f7-496b-8526-695857464684" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+![image](https://github.com/user-attachments/assets/c05951c5-8d13-4810-afcd-9fbaffd3208e)
 
 ### Context:
 
