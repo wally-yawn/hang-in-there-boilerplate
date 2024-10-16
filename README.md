@@ -1,6 +1,6 @@
 # Hang In There
 
-A boilerplate repo. 
+A boilerplate repo.
 
 ## Set Up
 
@@ -16,31 +16,47 @@ To view your project:
 
 1. In your terminal, navigate to your project repo
 2. Run the command `open index.html`
-  
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
 
-# Hang in There  
+---
+
+# README Template
+
+Before turning this project in, erase this line and everything above it and fill in the info below.
+
+---
+
+# Hang in There
 
 ### Abstract:
+
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
 
+This app displays a series of random motivational posters, and a series of unmotivational posters. Users can save the generated posters or create their own, and they can also delete any unmotivational posters they don't want to see. This gives users the ability to inspired or uninspire themselves, depending on their mood.
+
 ### Installation Instructions:
+
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
 
+Clone down the repository and open index.html in a web browser.
+
 ### Preview of App:
+
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off. gifs preferred!)
 
+<div style="position: relative; padding-bottom: 54.895833333333336%; height: 0;"><iframe src="https://www.loom.com/embed/575ab9f2cee94ae69b148359f7ae239e?sid=151ce930-48f7-496b-8526-695857464684" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### Context:
+
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 
 ### Contributors:
+
 [//]: <> (Who worked on this application? Link to your GitHub. Consider also providing LinkedIn link)
 
 ### Learning Goals:
+
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
 
 ### Wins + Challenges:
+
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
