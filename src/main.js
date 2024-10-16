@@ -419,5 +419,3 @@ function deleteUnmotivational() {
     displayUnmotivationalPosters();
   }
 }
-
-//TODO: clear form on create your own

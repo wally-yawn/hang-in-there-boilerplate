@@ -123,10 +123,7 @@ button:hover {
   padding: 25px;
   width: 425px;
   margin: 8px;
-  border-radius: 3%;
 }
-
-/* TODO: make mini saved poster not rounded */
 
 .mini-poster img {
   height: 200px;
@@ -173,6 +170,9 @@ button:hover {
 
 .unmotivational {
   background-color: gray;
+  border-radius: 3%;
 }
 
-/* TODO: Unmotivational posters text needs to be black */
+.unmotivational h2 {
+  color: black;
+}
